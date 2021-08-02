@@ -1,0 +1,74 @@
+ /* HEADER_TOP  */
+ /* //////////////////////// */
+ 
+.headerTop{
+    background-color: #181924;
+}
+
+.headerTopInner{
+    height: 40px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerTopInner i{
+    font-size: 12px;
+    color: red;
+}
+
+ /* HEADER_TOP_CONTACTS  */
+ /* //////////////////////// */
+
+.headerTopContacts{
+    display: flex;
+}
+
+
+.headerTopContacts div:not(:first-child){
+    margin-left: 18px;
+}
+
+.headerTopContacts div i {
+    margin-right: 8px;
+}
+
+.headerTopContacts div{
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.headerTopContacts div:hover{
+    color: red;
+}
+
+ /* HEADER_TOP_ACCOUNTS  */
+ /* //////////////////////// */
+
+.headerTopAccounts{
+    display: flex;
+    font-weight: 500;
+}
+
+.headerTopAccounts div:not(:first-child){
+    margin-left: 18px;
+}
+
+.headerTopAccounts div i{
+    margin-right: 8px;
+}
+
+
+.headerTopAccounts div{
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.headerTopAccounts div:hover{
+    color: red;
+    cursor: pointer;
+}
