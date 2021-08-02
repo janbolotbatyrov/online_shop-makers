@@ -4,7 +4,7 @@ import classes from './HeaderTop.module.css'
 const HeaderTop = () => {
     return (
         <div className={classes.headerTop}>
-            <div className="container">
+            <div className="container-xxl">
                 <div className={classes.headerTopInner}>
                     <div className={classes.headerTopContacts}>
                         <div className={classes.contactPhone}>

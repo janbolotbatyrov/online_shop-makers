@@ -1,5 +1,4 @@
- /* HEADER_TOP  */
- /* //////////////////////// */
+ /* \\\\\\\\\\\\\\\\\\\\\\   HEADER_TOP   //////////////////////// */
  
 .headerTop{
     background-color: #181924;
@@ -14,6 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .headerTopInner i{
@@ -21,8 +21,7 @@
     color: red;
 }
 
- /* HEADER_TOP_CONTACTS  */
- /* //////////////////////// */
+ /* \\\\\\\\\\\\\\\\\\\\\\  HEADER_TOP_CONTACTS  //////////////////////// */
 
 .headerTopContacts{
     display: flex;
@@ -46,8 +45,7 @@
     color: red;
 }
 
- /* HEADER_TOP_ACCOUNTS  */
- /* //////////////////////// */
+ /* \\\\\\\\\\\\\\\\\\\\\\  HEADER_TOP_ACCOUNTS   //////////////////////// */
 
 .headerTopAccounts{
     display: flex;
@@ -71,4 +69,25 @@
 .headerTopAccounts div:hover{
     color: red;
     cursor: pointer;
+}
+
+
+/* \\\\\\\\\\\\\\\\\\\\\\  ADAPTIVE   //////////////////////// */
+
+@media screen and (max-width: 426px) {
+    .headerTopInner{
+        height: 60px;
+    }
+    .headerTopContacts{
+        display: block;
+    }
+    .headerTopContacts div:not(:first-child){
+        margin-left: 0;
+    }
+    .headerTopAccounts{
+        display: block;
+    }
+    .headerTopAccounts div:not(:first-child){
+        margin: 0;
+    }
 }
