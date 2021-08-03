@@ -133,3 +133,26 @@
         display: block;
     }
 }
+
+
+@media screen and (max-width:376px) {
+    .headerMainSearch input{
+        width: 250px;
+    }
+    .headerMainSearch button{
+        width: 80px;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .headerMainSearch input{
+        width: 200px;
+    }
+    .headerMainCarts div{
+        margin: 0;
+    }
+    .headerMainCarts div+div{
+        margin-left: 40px;
+    }
+}

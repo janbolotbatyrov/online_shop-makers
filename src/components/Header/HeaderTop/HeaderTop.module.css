@@ -91,3 +91,25 @@
         margin: 0;
     }
 }
+
+@media screen and (max-width: 376px) {
+    .headerTopContacts{
+        display: none;
+    }
+    .headerTopAccounts{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .headerTopContacts{
+        display: none;
+    }
+    .headerTopAccounts{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+}

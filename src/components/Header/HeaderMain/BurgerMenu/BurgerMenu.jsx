@@ -2,7 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import classes from './BurgerMenu.module.css'
 
-const BurgerMenu = () => {
+const BurgerMenu = (props) => {
+
+    function handleClick(){
+        props.setOpen(false)
+    }
+
     return (
         <div className={classes.burgerMenu}>
             <div className={classes.burgerMenuInner}>
@@ -26,6 +31,9 @@ const BurgerMenu = () => {
                         <Link to='/accerssories' className={classes.burgerMenuLink}>Accerssories</Link>
                     </li>
                 </ul>
+                <div className={classes.burgerMenuClose} onClick={handleClick}>
+                    <i className="fas fa-times"></i>
+                </div>
             </div>
         </div>
     )

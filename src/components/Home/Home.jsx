@@ -1,20 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Header from '../Header/Header'
-import BurgerMenu from './BurgerMenu/BurgerMenu'
+import NavMenu from '../NavMenu/NavMenu'
 
 const Home = () => {
-
-    const handleClick = () => {
-
-    }
 
     return (
         <div>
             <Header />
-            <BurgerMenu handleClick={handleClick} />
-            {/* {burgerMenu ? <BurgerMenu SetburgerMenu={burgerMenu} /> 
-                : null
-            } */}
+            <NavMenu />
         </div>
     )
 }
