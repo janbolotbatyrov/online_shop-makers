@@ -24,7 +24,24 @@
     color: rgb(255, 0, 0);
 }
 
-.navMenuList li+li{
-    margin-left: 30px;
+.navMenuList li:not(:last-child){
+    margin-right: 30px;
 }
 
+@media screen and (max-width: 426px) {
+    .navMenuList{
+        flex-wrap: wrap;
+    }
+    .navMenuList li:nth-child(5), .navMenuList li:nth-child(6) {
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .navMenuInner{
+        height: 80px;
+    }
+    .navMenuList li:nth-child(5), .navMenuList li:nth-child(6), .navMenuList li:nth-child(4) {
+        margin-top: 5px;
+    }
+}
