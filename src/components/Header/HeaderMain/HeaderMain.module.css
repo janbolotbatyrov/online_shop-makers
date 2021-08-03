@@ -1,0 +1,135 @@
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\ HEADER_MAIN /////////////////////////////// */
+.headerMain{
+    background-color: #0d0e17;
+    border-bottom: 3px solid #d40027;
+}
+
+.headerMainInner{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\ HEADER_MAIN-LOGO /////////////////////////////// */
+
+
+.headerMainLogo{
+    font-size: 44px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    transition: .2s;
+}
+
+.headerMainLogo:hover{
+    color: red;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\ HEADER_MAIN-SEARCH /////////////////////////////// */
+
+.headerMainSearch{
+    display: flex;
+}
+
+.headerMainSearch input{
+    border: 0;
+    outline: none;
+    width: 300px;
+    height: 40px;
+    border-radius: 50px 0 0px 50px;
+    padding: 15px;
+    color: rgb(31, 31, 31);
+    color: red;
+}
+
+.headerMainSearch button{
+    border: 0;
+    height: 40px;
+    border-radius: 0px 50px 50px 0px;
+    background-color: #d2001f;
+    color: #fff;
+    font-weight: 700;
+    padding: 0 25px;
+    font-size: 16px;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\ HEADER_MAIN-CARTS /////////////////////////////// */
+
+.headerMainCarts{
+    display: flex;
+    font-size: 14px;
+    text-align: center;
+}
+
+.headerMainCarts i{
+    font-size: 18px;
+}
+
+.headerMainCarts span{
+    background-color: red;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\ HEADER_MAIN-FAVORITES /////////////////////////////// */
+
+.headerMainFavorites{
+    margin-right: 50px;
+    cursor: pointer;
+    position: relative;
+}
+
+.headerMainFavorites i:hover{
+    color: red;
+}
+
+.headerMainFavorites span{
+    top: -10px;
+    right: 10px;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\ HEADER_MAIN-CART /////////////////////////////// */
+
+.headerMainCart{
+    cursor: pointer;
+    position: relative;
+}
+
+.headerMainCart i:hover{
+    color: red;
+}
+
+.headerMainCart span{
+    top: -10px;
+    right: 0;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\ HEADER_MAIN-BURGER-MENU /////////////////////////////// */
+
+
+.headerMainBurgerMenu{
+    display: none;
+    margin-left: 50px;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\ HEADER_MAIN-ADAPTIVE /////////////////////////////// */
+
+@media screen and (max-width:992px) {
+    .headerMainInner{
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .headerMainLogo{
+        margin-bottom: -20px;
+    }
+    .headerMainBurgerMenu{
+        display: block;
+    }
+}

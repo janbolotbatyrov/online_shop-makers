@@ -1,0 +1,35 @@
+.burgerMenu{
+}
+
+.burgerMenuInner{
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background-color: #0d0e17;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+
+}
+
+.burgerMenuList{
+    margin-top: 80px;
+    list-style-type: none;
+    line-height: 4;
+    font-size: 14px;
+}
+
+.burgerMenuList li{
+}
+
+.burgerMenuLink{
+    color: #fff;
+    text-decoration: none;
+}
+
+.active{
+    color: red;
+    text-decoration: none;
+}
