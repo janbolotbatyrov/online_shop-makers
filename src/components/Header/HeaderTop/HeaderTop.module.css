@@ -103,7 +103,10 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 321px) {
+    .headerTopInner{
+        height: 50px;
+    }
     .headerTopContacts{
         display: none;
     }

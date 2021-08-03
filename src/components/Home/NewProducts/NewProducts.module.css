@@ -1,8 +1,12 @@
 .newProductsInner{
-    display: flex;
-    justify-content: space-between;
+    
     margin-top: 80px;
     font-family: 'Montserrat', sans-serif;
+}
+
+.newProductsTop{
+    display: flex;
+    justify-content: space-between;
 }
 
 .newProductsInner h3{
@@ -48,4 +52,16 @@
 
 .newProductsList li .active{
     color: #D10024;
+}
+
+@media screen and (max-width: 426px) {
+    .newProductsTop{
+        display: block;
+    }
+    .newProductsList{
+        margin-top: 20px;
+        margin-bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
 }

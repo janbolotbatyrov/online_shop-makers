@@ -29,6 +29,9 @@
 }
 
 @media screen and (max-width: 426px) {
+    .navMenu{
+        display: none;
+    }
     .navMenuList{
         flex-wrap: wrap;
     }

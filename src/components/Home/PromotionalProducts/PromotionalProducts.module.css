@@ -1,0 +1,86 @@
+.promotionalProducts{
+    /* background-color: #E4E7ED; */
+    background-image: -webkit-linear-gradient(25deg, #E4E7ED 55%, #D31737 50%);
+}
+
+.promotionalProductsInner{
+    height: 420px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.promotionalProductsImg img{
+    height: 400px;
+}
+
+.promotionalProductsTextList{
+    list-style-type: none;
+    display: flex;
+    text-align: center;
+}
+
+.promotionalProductsTextList li{
+    width: 120px;
+    height: 120px;
+    background-color: #D31737;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.promotionalProductsTextList li:nth-child(3){
+    background-color: #E4E7ED;
+    color: #D31737;
+}
+
+.promotionalProductsTextList li:nth-child(4){
+    background-color: #E4E7ED;
+    color: #D31737;
+}
+
+.promotionalProductsTextList li+li{
+    margin-left: 20px;
+}
+
+.promotionalProductsTextList li span{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.promotionalProductsTextList li p{
+    font-size: 12px;
+}
+
+.promotionalProductsTextTitle{
+    text-align: center;
+    color: #2B2D42;
+    font-weight: 700;
+    font-size: 34px;
+    margin-top: 30px;
+    letter-spacing: 1px;
+}
+
+.promotionalProductsTextDescr{
+    text-align: center;
+    color: #2B2D42;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.promotionalProductsTextBtn{
+    text-align: center;
+    color: #fff;
+    background-color: #D31737;
+    margin: 0 auto;
+    width: 30%;
+    font-weight: 700;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+}

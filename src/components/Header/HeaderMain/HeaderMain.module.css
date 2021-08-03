@@ -129,11 +129,14 @@
     .headerMainLogo{
         margin-bottom: -20px;
     }
+    
+}
+
+@media screen and (max-width:426px) {
     .headerMainBurgerMenu{
         display: block;
     }
 }
-
 
 @media screen and (max-width:376px) {
     .headerMainSearch input{
