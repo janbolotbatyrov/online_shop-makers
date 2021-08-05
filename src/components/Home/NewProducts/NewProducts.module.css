@@ -138,6 +138,9 @@
     .newProductList li{
         width: 90%;
     }
+    .newProductImg img{
+        max-width: 300px;
+    }
 }
 
 @media screen and (max-width:320px) {

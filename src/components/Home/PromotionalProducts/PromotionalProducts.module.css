@@ -19,6 +19,7 @@
     list-style-type: none;
     display: flex;
     text-align: center;
+    flex-wrap: wrap;
 }
 
 .promotionalProductsTextList li{
@@ -83,4 +84,137 @@
     padding: 10px 30px;
     border-radius: 50px;
     cursor: pointer;
+}
+
+@media screen and (max-width:1025px) {
+    .promotionalProductsInner{
+        position: relative;
+    }
+    .promotionalProductsImg img{
+        height: 300px;
+    }
+
+    .promotionalProductsTextList li{
+        width: 100px;
+        height: 100px;
+        background-color: #E4E7ED;
+        color: #D31737;
+    }
+    .promotionalProductsText{
+        order: 2;
+
+    }
+    .promotionalProductsImg:first-child{
+        margin-bottom: 100px;
+        margin-left: 60px;
+    }
+    .promotionalProductsImg:last-child{
+        order: 1;
+        position: absolute;
+        bottom: 0;
+        left: 35%;
+        transform: translateX(-50%);
+    }
+    .promotionalProductsTextTitle{
+        margin-left: 20px;
+        color: #fff;
+        font-size: 30px;
+
+    }
+    .promotionalProductsTextBtn{
+        font-size: 14px;
+        background: #E4E7ED;
+        color: #D31737;
+    }
+}
+
+@media screen and (max-width:769px) {
+    .promotionalProductsInner{
+        margin-top: -80px;
+    }
+    .promotionalProductsImg:first-child{
+        margin-bottom: 140px;
+        margin-left: 0;
+    }
+    .promotionalProductsImg:last-child{
+        left: 30%;
+    }
+    .promotionalProductsTextList{
+        margin-top: -50px;
+    }
+    .promotionalProductsTextList li{
+        width: 80px;
+        height: 80px;
+    }
+    .promotionalProductsTextTitle{
+        margin-top: 10px;  
+    }
+    .promotionalProductsTextBtn{
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width:426px) {
+    .promotionalProductsInner{
+        height: 500px;
+        background: #E4E7ED;
+        display: block;
+    }
+    .promotionalProductsImg img{
+        height: 200px;
+    }
+    .promotionalProductsText li{
+        background-color: #D31737 !important;
+        color: #fff !important;
+    }
+    .promotionalProductsTextList{
+        display: flex;
+        justify-content: center;
+    }
+    .promotionalProductsImg:first-child{
+        margin-bottom: 50px;
+    }
+    .promotionalProductsImg:last-child{
+        top: 0;
+        left: 75%;
+    }
+    .promotionalProductsTextTitle{
+        color: #D31737;
+    }
+    .promotionalProductsTextBtn{
+        background-color: #D31737;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width:376px) {
+    .promotionalProductsImg:last-child{
+        top: 0;
+        left: 75%;
+    }
+    .promotionalProductsImg img{
+        height: 180px;
+    }
+    .promotionalProductsTextList li+li{
+        margin-left: 10px;
+    }
+    .promotionalProductsTextTitle{
+        font-size: 26px;
+    }
+    .promotionalProductsTextDescr{
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width:321px) {
+    .promotionalProductsInner{
+        height: 600px;
+    }
+    .promotionalProductsImg:last-child{
+        top: 0;
+        left: 70%;
+    }
+    .promotionalProductsTextBtn{
+        width: 200px;
+    }
 }

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { productContext } from "../../../context/ProductContext";
 import BurgerMenu from "./BurgerMenu/BurgerMenu";
 import classes from "./HeaderMain.module.css";
 
@@ -15,7 +16,7 @@ const HeaderMain = () => {
                         Logo
                     </Link>
                     <div className={classes.headerMainSearch}>
-                        <input type="text" placeholder="Search here" />
+                        <input type="text" placeholder="Search here"  />
                         <button>Search</button>
                     </div>
                     <div className={classes.headerMainCarts}>

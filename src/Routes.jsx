@@ -5,6 +5,7 @@ import Edit from './components/Admin/Edit/Edit'
 import Header from './components/Header/Header'
 import Home from './components/Home/Home'
 import NavMenu from './components/NavMenu/NavMenu'
+import ProductDetail from './components/ProductDetail/ProductDetail'
 import ProductsList from './components/ProductsList/ProductsList'
 
 const Routes = () => {
@@ -17,6 +18,7 @@ const Routes = () => {
                 <Route exact path='/products' component={ProductsList} />
                 <Route exact path='/add' component={Add} />
                 <Route exact path='/edit' component={Edit} />
+                <Route exact path='/detail/:id' component={ProductDetail} />
             </Switch>
         </BrowserRouter>
     )

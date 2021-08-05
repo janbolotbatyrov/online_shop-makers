@@ -5,7 +5,8 @@ export const productContext = React.createContext()
 
 const INIT_STATE ={
     products: [],
-    productToEdit: null
+    productToEdit: null,
+    detail: {}
 }
 
 const reducer = (state = INIT_STATE, action) => {
@@ -14,6 +15,8 @@ const reducer = (state = INIT_STATE, action) => {
             return {...state, products: action.payload}
         case 'EDIT_PRODUCT':
             return {...state, productToEdit: action.payload}
+        case "GET_DETAIL_PRODUCT": 
+            return {...state, detail: action.payload}
         default:
             return state
     }
@@ -54,15 +57,26 @@ const ProductContextProvider = ({children}) => {
         history.push('/products')
     }
 
+    const getDetail = async (id) => {
+        const {data} = await axios(`http://localhost:8000/products/${id}`)
+        dispatch({
+            type: "GET_DETAIL_PRODUCT",
+            payload: data
+        })
+    }
+    
+
     return(
         <productContext.Provider value={{
             products: state.products,
             productToEdit: state.productToEdit,
+            detail: state.detail,
             addProduct,
             getProductsData,
             editProduct,
             saveProduct,
-            deleteProduct
+            deleteProduct,
+            getDetail
         }}>
             {children}
         </productContext.Provider>
