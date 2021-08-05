@@ -1,28 +1,60 @@
-import React from 'react'
-import NewProductItem from './NewProductItem/NewProductItem'
-import classes from './NewProducts.module.css'
+import React, { useContext, useEffect } from "react";
+import { productContext } from "../../../context/ProductContext";
+import classes from "./NewProducts.module.css";
 
 const NewProducts = () => {
-    return (
-        <div className={classes.newProducts}>
-            <div className="container-xxl">
-                <div className={classes.newProductsInner}>
-                    <div className={classes.newProductsTop}>
-                        <h3 className={classes.newProductsTitle}>New Products</h3>
-                        <ul className={classes.newProductsList}>
-                            <li class="active"><a data-toggle="tab" class={classes.active} href="#tab1">Laptops</a></li>
-                            <li><a data-toggle="tab" href="#tab1">Smartphones</a></li>
-                            <li><a data-toggle="tab" href="#tab1">Cameras</a></li>
-                            <li><a data-toggle="tab" href="#tab1">Accessories</a></li>
-                        </ul>
-                    </div>
-                    <div className={classes.newProductsMain}>
-                        <NewProductItem />
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}
+  const { products, getProductsData } = useContext(productContext);
 
-export default NewProducts
+  useEffect(() => {
+    getProductsData();
+  }, []);
+  let count = 1
+  function counterProducts(){
+    count++
+  }
+  return (
+    <div className={classes.productsList}>
+      <div className="container">
+        <div className={classes.productsListInner}>
+          <ul className={classes.newProductList}>
+            {products.map((item) => (
+              <li key={item.id}>
+                <div className={classes.newProductImg}>
+                  <img src={item.productImage} alt="" />
+                </div>
+                <div className={classes.newProductBody}>
+                  <div className={classes.newProductCategory}>
+                    {item.productType}
+                  </div>
+                  <div className={classes.newProductTitle}>
+                    {item.productTitle}
+                  </div>
+                  <div className={classes.newProductPrice}>
+                    {item.productPrice}
+                  </div>
+                  <div className={classes.newProductDescr}>
+                    {item.productDescription}
+                  </div>
+                  <div className={classes.newProductStars}>
+                    <hr />
+                  </div>
+                  <div className={classes.newProductFavorite}>
+                    <i className="far fa-heart"></i>
+                  </div>
+                </div>
+                <div className={classes.newProductAddToCart}>
+                  <button className="add-to-cart-btn">
+                    <i className="fa fa-shopping-cart"></i> add to cart
+                  </button>
+                </div>
+                {counterProducts()}
+              </li>
+  ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default NewProducts;

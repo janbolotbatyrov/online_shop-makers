@@ -1,3 +1,29 @@
+.productsListInner{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+}
+
+.productsListFilter{
+    display: flex;
+    justify-content: space-between;
+}
+
+.productsListFilterPrice{
+    width: 30%;
+}
+
+.productsListFilter h3{
+    font-weight: 500;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.productsListFilterCategories p{
+    padding-bottom: 10px;
+}
+
+/* //////////////////////// */
+
 .newProductList{
     display: flex;
     justify-content: space-between;
@@ -8,7 +34,7 @@
 }
 
 .newProductList li{
-    width: 22%;
+    width: 30%;
     text-align: center;
     margin: 15px 0px;
     box-shadow: 0px 0px 0px 0px #E4E7ED, 0px 0px 0px 1.5px #E4E7ED;
@@ -23,13 +49,18 @@
     box-shadow: 0px 0px 0px 0px #D10024, 0px 0px 0px 2px #D10024;
 }
 
+.newProductImg{
+    height: 180px;
+    margin-bottom: 20px;
+}
+
 .newProductImg img{
     height: 180px;
-    margin-bottom: 50px;
     padding: 0 10px;
 }
 
 .newProductBody{
+    height: 279px;
     background-color: #fff;
     padding-bottom: 20px;
     position: relative;
@@ -54,11 +85,16 @@
     font-size: 18px;
 }
 
+.newProductDescr{
+    width: 80%;
+    height: 100px;
+    margin: 5px auto;
+}
+
 .newProductStars{
     width: 85%;
     margin: 0 auto;
     height: 1px;
-    margin-bottom: 10px;
 }
 
 .newProductStars hr{
@@ -67,7 +103,6 @@
 
 .newProductFavorite{
     font-size: 22px;
-    margin-top: 20px;
 }
 
 
@@ -76,13 +111,13 @@
     bottom: 0px;
     right: 0;
     left: 0;
-    transform: translateY(-50%);
+    transform: translateY(-120%);
     background-color: #1e1f29;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 0.2s all;
+    transition: 0.3s all;
 }
 
 .newProductAddToCart button{

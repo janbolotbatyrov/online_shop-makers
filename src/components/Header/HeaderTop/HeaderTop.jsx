@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import classes from './HeaderTop.module.css'
 
 const HeaderTop = () => {
@@ -27,7 +28,7 @@ const HeaderTop = () => {
                         </div>
                         <div className={classes.accountProfile}>
                             <i className="far fa-user"></i>
-                            My Account
+                            <Link to='/add'>My Account</Link>
                         </div>
                     </div>
                 </div>

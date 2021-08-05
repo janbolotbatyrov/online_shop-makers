@@ -12,7 +12,7 @@ const HeaderMain = () => {
             <div className="container-xxl">
                 <div className={classes.headerMainInner}>
                     <Link to='/' className={classes.headerMainLogo}>
-                        Makers
+                        Logo
                     </Link>
                     <div className={classes.headerMainSearch}>
                         <input type="text" placeholder="Search here" />
