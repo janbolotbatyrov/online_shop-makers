@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { productContext } from "../../../context/ProductContext";
 import BurgerMenu from "./BurgerMenu/BurgerMenu";
 import classes from "./HeaderMain.module.css";
@@ -7,16 +7,38 @@ import classes from "./HeaderMain.module.css";
 const HeaderMain = () => {
 
     const [open, setOpen] = useState(false)
+    const history = useHistory  ()
+    const [searchVal, setSearchVal] = useState(getSearchVal() || '')
+    const {getProductsData} = useContext(productContext)
+
+    function getSearchVal() {
+        const search = new URLSearchParams(history.location.search)
+        return search.get('q')
+    }
+
+    const handleValue = (e) => {
+        const search = new URLSearchParams(history.location.search)
+        search.set('q', e.target.value)
+        history.push(`${history.location.pathname}?${search.toString()}`)
+        setSearchVal(e.target.value)
+        getProductsData(history)
+      }
 
     return (
         <div className={classes.headerMain}>
             <div className="container-xxl">
                 <div className={classes.headerMainInner}>
                     <Link to='/' className={classes.headerMainLogo}>
-                        Logo
+                        Makers
                     </Link>
                     <div className={classes.headerMainSearch}>
-                        <input type="text" placeholder="Search here"  />
+                        <input 
+                            type="text" 
+                            placeholder="Search here"
+                            inputProps={{ 'aria-label': 'search' }}
+                            value={searchVal}
+                            onChange={handleValue}  
+                        />
                         <button>Search</button>
                     </div>
                     <div className={classes.headerMainCarts}>

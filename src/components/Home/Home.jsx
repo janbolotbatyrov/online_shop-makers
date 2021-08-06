@@ -5,12 +5,11 @@ import NewProducts from './NewProducts/NewProducts'
 import PromotionalProducts from './PromotionalProducts/PromotionalProducts'
 import RecommendedProducts from './RecommendedProducts/RecommendedProducts'
 
-const Home = () => {
-
+const Home = (props) => {
     return (
         <div>
             <RecommendedProducts />
-            <NewProducts />
+            <NewProducts history={props.history} />
             <PromotionalProducts />
         </div>
     )

@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { productContext } from "../../../context/ProductContext";
 import classes from "./NewProducts.module.css";
 
-const NewProducts = () => {
+const NewProducts = ({history}) => {
   const { products, getProductsData } = useContext(productContext);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const NewProducts = () => {
         <div className={classes.productsListInner}>
           <ul className={classes.newProductList}>
             {products.map((item) => (
-              <li key={item.id}>
+              <li key={item.id} onClick={() => history.push(`/detail/${item.id}`) }>
                 <div className={classes.newProductImg}>
                   <img src={item.productImage} alt="" />
                 </div>

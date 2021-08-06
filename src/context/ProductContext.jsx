@@ -26,7 +26,8 @@ const ProductContextProvider = ({children}) => {
     const [state, dispatch] = useReducer(reducer, INIT_STATE)
 
     const getProductsData = async() => {
-        let {data} = await axios('http://localhost:8000/products')
+        console.log(window.location.search);
+        let {data} = await axios(`http://localhost:8000/products${window.location.search}`)
         dispatch({
             type: 'GET_PRODUCTS_DATA',
             payload: data

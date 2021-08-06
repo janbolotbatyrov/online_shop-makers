@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { productContext } from "../../context/ProductContext";
 import classes from "./ProductsList.module.css";
 
@@ -9,43 +9,25 @@ const ProductsList = (props) => {
   useEffect(() => {
     getProductsData()
   }, []);
-
   return (
     <div className={classes.productsList}>
       <div className="container">
         <div className={classes.productsListInner}>
           <div className={classes.productsListFilter}>
-            <div className={classes.productsListFilterCategories}>
-              <h3 for="customRange1" className="form-label">
-                Categories
-              </h3>{" "}
-              <br />
-              <div className="d-flex">
-                <div className="me-5">
-                  <p>Laptops</p>
-                  <p>Smartphones</p>
-                  <p>Cameras</p>
-                </div>
-                <div>
-                  <p>Accessories</p>
-                  <p>TV</p>
-                </div>
-              </div>
-            </div>
-
             <div className={classes.productsListFilterPrice}>
               <h3 for="customRange1" className="form-label">
                 Price
-              </h3>{" "}
-              <br />
-              <input type="range" className="form-range" id="customRange1" />
-              <input type="number" />
-              <input type="number" />
+              </h3>
+              <input  type="range" className="form-range" id="customRange1"  />
+              <div className='d-flex justify-content-center'>
+                <input className={classes.filterPriceInp} type="number" />
+                <input className={classes.filterPriceInp} type="number"  />
+              </div>
             </div>
           </div>
           <ul className={classes.newProductList}>
             {products.map((item) => (
-                <li key={item.id} onClick={() => props.history.push(`/detail/${item.id}`)}>
+                <li key={item.id} onFocus={() => props.history.push(`/detail/${item.id}`)}>
                   <div className={classes.newProductImg}>
                     <img src={item.productImage} alt="" />
                   </div>
