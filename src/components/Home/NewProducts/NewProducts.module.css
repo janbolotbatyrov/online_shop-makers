@@ -1,11 +1,12 @@
-
+.productsListInner{
+    margin-bottom: 100px;
+}
 .newProductList{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     list-style-type: none;
     margin-top: 50px;
-    margin-bottom: 100px;
 }
 
 .newProductList li{

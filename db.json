@@ -1,20 +1,26 @@
 {
+  "admin": [
+    {
+      "isAdmin": true,
+      "id": 1
+    }
+  ],
   "products": [
     {
-      "productTitle": "Ноутбук Lenovo ThinkPad 15",
-      "productImage": "https://www.itaf.eu/wp-content/uploads/2020/04/best-laptops-cover.jpg",
+      "productTitle": "LG Gram 17",
+      "productImage": "https://cdn.vox-cdn.com/thumbor/9iP5M_5VEbAmAUm5bBhlr-v9KDk=/0x0:2040x1360/1720x0/filters:focal(0x0:2040x1360):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/22411713/cfaulkner_20210326_4491_0006.jpg",
       "productType": "laptop",
-      "productPrice": "$999",
-      "productDescription": "a long established fact that a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution",
-      "id": 4
+      "productPrice": "$1,697",
+      "productDescription": "The LG Gram 17 is our choice for the best lightweight 17-inch laptop to buy in 2021.",
+      "id": 1
     },
     {
-      "productTitle": "Earphone bluetooth",
-      "productImage": "https://cdn1.ozone.ru/s3/multimedia-y/c1200/6026346274.jpg",
-      "productType": "earphone",
-      "productPrice": "$29",
-      "productDescription": "here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
-      "id": 5
+      "productTitle": "Microsoft Surface Laptop 4",
+      "productImage": "https://cdn.mos.cms.futurecdn.net/nVkBk7kaJAZ6JpTgKrnqCJ-970-80.jpg.webp",
+      "productType": "laptop",
+      "productPrice": "$999",
+      "productDescription": "While Apple blew us away with the new MacBook Air (above), arch rival Microsoft has also impressed us with its new Surface Laptop 4",
+      "id": 2
     }
   ]
 }

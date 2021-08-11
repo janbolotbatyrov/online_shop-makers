@@ -2,23 +2,22 @@ import React, { useContext, useEffect } from "react";
 import { productContext } from "../../../context/ProductContext";
 import classes from "./NewProducts.module.css";
 
-const NewProducts = ({history}) => {
+const NewProducts = ({ history }) => {
   const { products, getProductsData } = useContext(productContext);
-
   useEffect(() => {
     getProductsData();
   }, []);
-  let count = 1
-  function counterProducts(){
-    count++
-  }
+
   return (
     <div className={classes.productsList}>
       <div className="container">
         <div className={classes.productsListInner}>
           <ul className={classes.newProductList}>
             {products.map((item) => (
-              <li key={item.id} onClick={() => history.push(`/detail/${item.id}`) }>
+              <li
+                key={item.id}
+                onClick={() => history.push(`/detail/${item.id}`)}
+              >
                 <div className={classes.newProductImg}>
                   <img src={item.productImage} alt="" />
                 </div>
@@ -47,9 +46,8 @@ const NewProducts = ({history}) => {
                     <i className="fa fa-shopping-cart"></i> add to cart
                   </button>
                 </div>
-                {counterProducts()}
               </li>
-  ))}
+            ))}
           </ul>
         </div>
       </div>

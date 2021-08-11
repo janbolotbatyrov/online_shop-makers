@@ -3,9 +3,11 @@ import { useParams } from "react-router-dom";
 import { productContext } from "../../context/ProductContext";
 import classes from "./ProductDetail.module.css";
 
-const ProductDetail = () => {
+const ProductDetail = ({history}) => {
   const { id } = useParams();
   const { detail, getDetail } = useContext(productContext);
+  // let params = useParams()
+  // console.log(params);
   useEffect(() => {
     getDetail(id);
   }, [id]);

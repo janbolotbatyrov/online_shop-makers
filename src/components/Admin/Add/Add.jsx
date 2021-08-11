@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useLocation, useParams } from 'react-router-dom';
 import { productContext } from '../../../context/ProductContext';
 import classes from './Add.module.css'
 
@@ -24,6 +24,12 @@ const Add = () => {
         }
         addProduct(newObj)
     }
+  
+    // let history = useHistory()
+    // console.log(history);
+    // let location = useLocation()
+    // console.log(location);
+    
     
     return (
        <div className={classes.add}>

@@ -1,6 +1,8 @@
 .productsListInner{
     font-family: 'Montserrat', sans-serif;
     margin-top: 20px;
+    margin-bottom: 100px;
+
 }
 
 .productsListFilter{
@@ -46,7 +48,6 @@
     flex-wrap: wrap;
     list-style-type: none;
     margin-top: 50px;
-    margin-bottom: 100px;
 }
 
 .newProductList li{
