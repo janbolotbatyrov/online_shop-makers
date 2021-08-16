@@ -10,7 +10,7 @@
       "productTitle": "LG Gram 17",
       "productImage": "https://cdn.vox-cdn.com/thumbor/9iP5M_5VEbAmAUm5bBhlr-v9KDk=/0x0:2040x1360/1720x0/filters:focal(0x0:2040x1360):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/22411713/cfaulkner_20210326_4491_0006.jpg",
       "productType": "laptop",
-      "productPrice": "$1,697",
+      "productPrice": "$1,699",
       "productDescription": "The LG Gram 17 is our choice for the best lightweight 17-inch laptop to buy in 2021.",
       "id": 1
     },
@@ -21,6 +21,22 @@
       "productPrice": "$999",
       "productDescription": "While Apple blew us away with the new MacBook Air (above), arch rival Microsoft has also impressed us with its new Surface Laptop 4",
       "id": 2
+    },
+    {
+      "productTitle": "Sony a7 III Full-Frame",
+      "productImage": "https://images-na.ssl-images-amazon.com/images/I/91rQ3XfEYzL._SL1500_.jpg",
+      "productType": "cameras",
+      "productPrice": "$999",
+      "productDescription": "About this item Full-Frame Mirrorless Comes with 28-70mm F3.5-5.6 OSS Lens Interchangeable Lens",
+      "id": 3
+    },
+    {
+      "productTitle": "Samsung Galaxy Note 10+",
+      "productImage": "https://ostore.kg/upload/resize_cache/iblock/d8d/500_500_1/1Black.JPG",
+      "productType": "smartphone",
+      "productPrice": "76990 cом",
+      "productDescription": "Производитель\tSamsung Цвет\tBlack Дата выпуска\tАвгуст 2019",
+      "id": 4
     }
   ]
 }

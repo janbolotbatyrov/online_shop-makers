@@ -87,6 +87,12 @@ const ProductContextProvider = ({ children }) => {
     let {data} = await axios.patch('http://localhost:8000/admin/1', loginData)  
     window.location.replace('login')
   }
+
+  const addToCard = (e) => {
+    e.stopProgation()
+    console.log('ADD TO CART')
+  }
+
   return (
     <productContext.Provider
       value={{
@@ -101,7 +107,8 @@ const ProductContextProvider = ({ children }) => {
         deleteProduct,
         getDetail,
         checkAdmin,
-        logout
+        logout,
+        addToCard
       }}
     >
       {children}

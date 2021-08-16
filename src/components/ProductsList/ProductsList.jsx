@@ -12,11 +12,16 @@ const ProductsList = (props) => {
     let admin = data[0].isAdmin;
     setIsAdmin(admin);
   };
-
+  
   useEffect(() => {
     getProductsData();
     checkAdmin()
   }, []);
+
+  const addToCard = (e) =>{
+      console.log('addtocart');
+  }
+
   return (
     <div className={classes.productsList}>
       <div className="container">
@@ -79,16 +84,17 @@ const ProductsList = (props) => {
                     ) : null}
                   </div>
                 </div>
-                <div className={classes.newProductAddToCart}>
-                  <button className="add-to-cart-btn">
-                    <i className="fa fa-shopping-cart"></i> add to cart
-                  </button>
-                </div>
+                
               </li>
             ))}
           </ul>
         </div>
       </div>
+      <div className={classes.newProductAddToCart}>
+                  <button className="add-to-cart-btn">
+                    <i className="fa fa-shopping-cart" onClick={() => console.log('1')}></i> add to cart
+                  </button>
+                </div>
     </div>
   );
 };
