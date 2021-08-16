@@ -1,1 +1,0 @@
-export const API = 'https://online-shop-janbolot.herokuapp.com/api/'
