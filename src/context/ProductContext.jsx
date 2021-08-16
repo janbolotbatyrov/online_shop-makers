@@ -1,7 +1,5 @@
 import React, { useReducer } from "react";
 import axios from "axios";
-import {API} from '../helpers/Constants'
-
 export const productContext = React.createContext();
 
 const INIT_STATE = {
@@ -45,17 +43,17 @@ const ProductContextProvider = ({ children }) => {
   };
 
   const addProduct = (newTask) => {
-    axios.post(`${API}products`, newTask);
+    axios.post("https://online-shop-janbolot.herokuapp.com/api/products", newTask);
     getProductsData();
   };
 
   const deleteProduct = async (id) => {
-    await axios.delete(`${API}products/${id}`);
+    await axios.delete(`https://online-shop-janbolot.herokuapp.com/api/products/${id}`);
     getProductsData();
   };
 
   const editProduct = async (id, history) => {
-    let { data } = await axios(`${API}products/${id}`);
+    let { data } = await axios(`https://online-shop-janbolot.herokuapp.com/api/products/${id}`);
     dispatch({
       type: "EDIT_PRODUCT",
       payload: data,
@@ -65,14 +63,14 @@ const ProductContextProvider = ({ children }) => {
 
   const saveProduct = async (newProduct, history) => {
     await axios.patch(
-      `${API}products/${newProduct.id}`,
+      `https://online-shop-janbolot.herokuapp.com/api/products/${newProduct.id}`,
       newProduct
     );
     history.push("/products");
   };
 
   const getDetail = async (id) => {
-    const { data } = await axios(`${API}products/${id}`);
+    const { data } = await axios(`https://online-shop-janbolot.herokuapp.com/api/products/${id}`);
     dispatch({
       type: "GET_DETAIL_PRODUCT",
       payload: data,
@@ -80,12 +78,12 @@ const ProductContextProvider = ({ children }) => {
   };
 
   const checkAdmin = async(loginData,history) => {
-    let data = await axios.patch(`${API}admin/1`, loginData)  
+    let data = await axios.patch('https://online-shop-janbolot.herokuapp.com/api/admin/1', loginData)  
     history.push('/')
   }
 
   const logout = async(loginData) => {
-    let {data} = await axios.patch(`${API}admin/1`, loginData)  
+    let {data} = await axios.patch('https://online-shop-janbolot.herokuapp.com/api/admin/1', loginData)  
     window.location.replace('login')
   }
 
