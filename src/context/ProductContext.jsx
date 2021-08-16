@@ -1,5 +1,6 @@
 import React, { useReducer } from "react";
 import axios from "axios";
+
 export const productContext = React.createContext();
 
 const INIT_STATE = {
@@ -34,7 +35,7 @@ const ProductContextProvider = ({ children }) => {
 
   const getProductsData = async () => {
     let { data } = await axios(
-      `${API}${window.location.search}`
+      `http://localhost:8000/products${window.location.search}`
     );
     dispatch({
       type: "GET_PRODUCTS_DATA",
@@ -43,17 +44,17 @@ const ProductContextProvider = ({ children }) => {
   };
 
   const addProduct = (newTask) => {
-    axios.post("https://online-shop-janbolot.herokuapp.com/api/products", newTask);
+    axios.post("http://localhost:8000/products", newTask);
     getProductsData();
   };
 
   const deleteProduct = async (id) => {
-    await axios.delete(`https://online-shop-janbolot.herokuapp.com/api/products/${id}`);
+    await axios.delete(`http://localhost:8000/products/${id}`);
     getProductsData();
   };
 
   const editProduct = async (id, history) => {
-    let { data } = await axios(`https://online-shop-janbolot.herokuapp.com/api/products/${id}`);
+    let { data } = await axios(`http://localhost:8000/products/${id}`);
     dispatch({
       type: "EDIT_PRODUCT",
       payload: data,
@@ -63,14 +64,14 @@ const ProductContextProvider = ({ children }) => {
 
   const saveProduct = async (newProduct, history) => {
     await axios.patch(
-      `https://online-shop-janbolot.herokuapp.com/api/products/${newProduct.id}`,
+      `http://localhost:8000/products/${newProduct.id}`,
       newProduct
     );
     history.push("/products");
   };
 
   const getDetail = async (id) => {
-    const { data } = await axios(`https://online-shop-janbolot.herokuapp.com/api/products/${id}`);
+    const { data } = await axios(`http://localhost:8000/products/${id}`);
     dispatch({
       type: "GET_DETAIL_PRODUCT",
       payload: data,
@@ -78,12 +79,12 @@ const ProductContextProvider = ({ children }) => {
   };
 
   const checkAdmin = async(loginData,history) => {
-    let data = await axios.patch('https://online-shop-janbolot.herokuapp.com/api/admin/1', loginData)  
+    let data = await axios.patch('http://localhost:8000/admin/1', loginData)  
     history.push('/')
   }
 
   const logout = async(loginData) => {
-    let {data} = await axios.patch('https://online-shop-janbolot.herokuapp.com/api/admin/1', loginData)  
+    let {data} = await axios.patch('http://localhost:8000/admin/1', loginData)  
     window.location.replace('login')
   }
 
